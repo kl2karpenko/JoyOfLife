@@ -5,8 +5,8 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('./package.json'),
     uglify: {
       build: {
-        src: ['./src/**.js'],
-        dest: 'build/<%= pkg.name %>.min.js'
+        src: ['!./js/jquery.js', './js/**.js'],
+        dest: '<%= pkg.name %>.min.js'
       }
     },
     less: {
@@ -25,12 +25,23 @@ module.exports = function(grunt) {
     },
     watch: {
       styles: {
-        files: ['css/**.less'], // which files to watch
+        files: ['css/**/**.less'], // which files to watch
         tasks: ['less'],
         options: {
           nospawn: true
         }
       }
+    },
+    copy: {
+      main: {
+        files: [
+          // includes files within path
+          {expand: true, src: ['app.css'], dest: 'build/', filter: 'isFile'},
+          {expand: true, src: ['joyoflife.min.js'], dest: 'build/', filter: 'isFile'},
+          {expand: true, src: ['img/**'], dest: 'build/'},
+          {expand: true, src: ['*.html', 'events/*.html'], dest: 'build/'}
+        ],
+      },
     }
   });
 
@@ -39,8 +50,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
+
   // Default task(s).
   grunt.registerTask('default', ['uglify', 'less']);
   grunt.registerTask('styles', ['less']);
+  grunt.registerTask('copyBuild', ['copy']);
   grunt.registerTask('watch:less', ['less', 'watch']);
 };

@@ -1,8 +1,77 @@
 body {
   color: #000;
+  margin: 0 !important;
+  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-size: 16px;
+
+  overflow-x: hidden;
 }
+
+@media screen and (max-width: @md) {
+  font-size: 11px;
+}
+@media screen and (max-width: @sm) {
+  font-size: 9px;
+}
+
+@url: '';
 
 @import (inline) "boot/bootstrap.min.css";
 @import (inline) "boot/bootstrap-grid.min.css";
 @import (inline) "boot/bootstrap-reboot.min.css";
-@import "paralax";
+@import (inline) "normalize.css";
+@import (inline) "parts/fontawesome.css";
+
+@import "parts/btn";
+@import "parts/menu";
+@import "parts/text";
+@import "parts/header";
+@import "parts/focus";
+@import "parts/separator";
+@import "parts/photos";
+@import "parts/team";
+@import "parts/comments";
+@import "parts/signup";
+@import "parts/footer";
+@import "parts/events";
+
+@import "parts/evs/musicwine";
+
+@red: #FE470F;
+@black: #272727;
+
+@lg: 1024px;
+@md: 992px;
+@sm: 450px;
+
+.modal {
+  background: rgba(0,0,0,0.75);
+}
+
+.layout-img {
+  background-image: url('img/fon1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @media screen and (max-width: @sm) {
+    background-size: 154% 89%;
+    background-position: center bottom;
+    background-color: #fff;
+  }
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.modal {
+  color: #272727 !important;
+
+  #mc_embed_signup *:not(.btn) {
+    color: #272727 !important;
+  }
+}
