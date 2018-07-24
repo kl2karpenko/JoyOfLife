@@ -98,9 +98,22 @@
   <div class=" home-header-wrap">
     <div class="header-content-wrap ">
       <div class="container">
-        <h2 class="intro-text">Игровые знакомства. Пикник в ботаническом саду.</h2>
+        <h2 class="intro-text">Игровые знакомства. Пикник в бот. саду.</h2>
 
-        <div class="buttons fixed"><a href="#registration" class="btn btn-primary custom-button red-btn">Регистрация</a></div>
+        <script>
+          $(function () {
+            if (location.href && location.href.indexOf('registration') === -1) {
+              $('#show_registration').html(`
+                <a href="#registration" class="btn btn-primary custom-button red-btn">
+                    Регистрация
+                </a>
+              `);
+              $('#show_registration').addClass('buttons fixed');
+            }
+          });
+        </script>
+
+        <div id="show_registration"></div>
 
         <div class="intro-desc">
           <div class="events-block-description single details">

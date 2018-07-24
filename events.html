@@ -92,7 +92,9 @@
 
 <div id="contentMain" class="events-page">
   <div class="layout-img"></div>
+
   <h1 class="intro-text">Расписание мероприятий:</h1>
+
   <section>
     <div class="container">
       <div class="events-wrapper">
@@ -116,12 +118,13 @@
     </div>
   </section>
 
+
   <section class="signup">
     <div class="container">
       <div class="textwidget custom-html-widget"><!-- Begin MailChimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
         <div id="mc_embed_signup" class="mc_embed_signup">
-          <h2>Получай 10% скидку на посещение нашего следующего мероприятия и подпишись на наши обновления! </h2>
+          <h2>Подписывайся на наши новости, и получай 10% скидку на следующее мероприятие! </h2>
+
           <form action="https://xyz.us18.list-manage.com/subscribe/post?u=0f6308b4f87a6971a3cd67ce4&amp;id=e3ae392412"
                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                 target="_blank" novalidate="novalidate">
@@ -130,23 +133,56 @@
               <div class="mc-field-group">
                 <label for="mce-EMAIL">Email <span class="asterisk">*</span>
                 </label>
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" aria-required="true">
+                <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" aria-required="true">
               </div>
               <div class="mc-field-group">
                 <label for="mce-FNAME">Имя Фамилия <span class="asterisk">*</span>
                 </label>
-                <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" aria-required="true">
+                <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME" aria-required="true">
               </div>
-              <div class="mc-field-group input-group">
-                <strong>Пол <span class="asterisk">*</span>
-                </strong>
-                <ul>
-                  <li><input type="radio" value="Мужской" name="MALEFEMALE" id="mce-MALEFEMALE-0"><label
-                      for="mce-MALEFEMALE-0">Мужской</label></li>
-                  <li><input type="radio" value="Женский" name="MALEFEMALE" id="mce-MALEFEMALE-1"><label
-                      for="mce-MALEFEMALE-1">Женский</label></li>
-                </ul>
+
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-12 col-lg-2">
+                    <div class="mc-field-group input-group">
+                      <strong>Ваш пол <span class="asterisk">*</span>
+                      </strong>
+                      <ul>
+                        <li><input type="radio" value="Мужской" name="MALEFEMALE" id="mce-MALEFEMALE-0"><label
+                                for="mce-MALEFEMALE-0">Мужской</label></li>
+                        <li><input type="radio" value="Женский" name="MALEFEMALE" id="mce-MALEFEMALE-1"><label
+                                for="mce-MALEFEMALE-1">Женский</label></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-lg-4">
+                    <div class="mc-field-group">
+                      <label style="margin-bottom: 20px;" for="mce-AGE_YOURS">Ваш возрастной диапазон <span class="asterisk">*</span></label>
+                      <select name="AGE_YOURS" class="form-control" id="mce-AGE_YOURS">
+                        <option value="18-25" selected>18-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-45">36-45</option>
+                        <option value="45+">45+</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-lg-6">
+                    <div class="mc-field-group">
+                      <label for="mce-AGE">С кем хотели бы пообщаться/познакомиться? <span class="asterisk">*</span></label>
+                      <select name="AGE" class="required form-control" id="mce-AGE" >
+                        <option value="18-30">18-30</option>
+                        <option value="25-35" selected>25-35</option>
+                        <option value="25-40">25-40</option>
+                        <option value="35-45">35-45</option>
+                        <option value="45+">45+</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
               </div>
+
               <div id="mce-responses" class="clear">
                 <div class="response" id="mce-error-response" style="display:none"></div>
                 <div class="response" id="mce-success-response" style="display:none"></div>
@@ -155,8 +191,8 @@
               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                                                                         name="b_0f6308b4f87a6971a3cd67ce4_e3ae392412"
                                                                                         tabindex="-1" value=""></div>
-              <div class="clear"><input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe"
-                                        class="button red-btn btn"></div>
+              <div class="clear btn-wrap-center"><input type="submit" value="Подписаться" name="subscribe" id="mc-embedded-subscribe"
+                                                        class="button red-btn btn"></div>
             </div>
           </form>
         </div>

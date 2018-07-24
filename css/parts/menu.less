@@ -8,7 +8,7 @@ menu {
   background: #fff;
   margin: 0;
   box-shadow: 0 0 3px #333;
-  height: 84px;
+  height: 125px;
   padding-left: 0 !important;
 
   #logo {
@@ -23,6 +23,31 @@ menu {
       max-height: 100%;
       max-width: 100%;
       display: block;
+    }
+  }
+
+  .main-menu-contacts {
+    text-align: center;
+
+    > div {
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    a {
+      color: @red;
+      font-weight: bold;
+      padding: 13px 34px;
+      transition: all 0.3s linear;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -61,16 +86,16 @@ menu {
         color: @black;
 
         &:not(.last).active {
-          background: @red;
-          color: #fff;
+          color: @red;
+          font-weight: bold;
         }
 
         transition: all 0.3s linear;
 
-        &:not(.contacts):hover {
-          color: #fff;
+        &:not(.contacts):not(.active):hover {
           text-decoration: none;
-          background: darken(@red, 20%);
+          color: darken(@red, 20%);
+          background: rgba(254, 71, 15, 0.2);
         }
       }
     }
@@ -83,6 +108,12 @@ menu {
   @media screen and (max-width: @lg) {
     height: 120px;
     text-align: center;
+
+    .main-menu-contacts {
+      > div {
+        text-align: center !important;
+      }
+    }
 
     ul.last {
       display: block;
@@ -118,7 +149,7 @@ menu {
     }
 
     #logo {
-      margin: 6px 0;
+      margin: 0;
       display: block;
       width: 50%;
       float: left;
@@ -176,5 +207,9 @@ menu {
         }
       }
     }
+  }
+
+  @media screen and (max-width: 776px) {
+    height: 135px;
   }
 }
