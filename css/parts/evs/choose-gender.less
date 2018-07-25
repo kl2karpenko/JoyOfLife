@@ -1,0 +1,57 @@
+.choose-gender {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+
+  position: fixed;
+
+  background-color: #fff;
+  z-index: 1000;
+
+  &-wrapper {
+    left: 0;
+    right: 0;
+
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  #logo {
+    height: 100px;
+    margin-bottom: 15px;
+
+    img {
+      height: 75%;
+    }
+  }
+
+  .buttons {
+    margin-top: 20px;
+
+    > div.col-sm-12:first-child {
+      text-align: right;
+    }
+
+    > div.col-sm-12:last-child {
+      text-align: left;
+    }
+
+    @media screen and (max-width: 776px) {
+      > div {
+        text-align: center !important;
+      }
+    }
+
+    .btn {
+      min-width: 300px;
+      display: inline-block;
+    }
+  }
+}
