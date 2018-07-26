@@ -8,7 +8,7 @@
 
   <title>Joy Of Life Events</title>
   <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../app.css?v=0.1.8">
+  <link rel="stylesheet" type="text/css" href="../app.css?v=0.2.1">
   <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
@@ -17,9 +17,6 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
-  <script src="../js/jquery.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -27,31 +24,18 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WT7J58G');</script>
   <!-- End Google Tag Manager -->
+
   <!-- Facebook Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '516189328798159');
-    fbq('track', 'PageView');
-  </script>
+  <script src="../js/src/pixel-FB.js"></script>
   <noscript><img height="1" width="1" style="display:none"
                  src="https://www.facebook.com/tr?id=516189328798159&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Facebook Pixel Code -->
-  <script>
-    fbq('track', 'Lead');
-  </script>
-  <script>
-    fbq('track', 'ViewContent');
-  </script>
+
   <!-- MAILCHIMP Code -->
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0f6308b4f87a6971a3cd67ce4/7a6cfa747b754c6eb9dc5e168.js");</script>
+  <script id="mcjs">
+    (function(){if(!window.$mcSite){$mcSite={};}})();
+  </script>
   <!-- MAILCHIMP Code -->
 </head>
 <body class="body events">
@@ -61,16 +45,16 @@
       <a href="../index.html"><img src="../img/logo.png?v=0.1.5" alt=""></a>
     </div>
 
-    <h2>Укажите ваш пол, чтобы продолжить</h2>
+    <h2>Расскажите немного о себе, чтобы продолжить</h2>
     <div class="row buttons">
-      <div class="col-sm-12 col-md-6">
-        <a id="female" class="gender btn btn-primary custom-button red-btn">
-          Я женщина
-        </a>
-      </div>
       <div class="col-sm-12 col-md-6">
         <a id="male" class="gender btn btn-primary custom-button red-btn">
           Я мужчина
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <a id="female" class="gender btn btn-primary custom-button red-btn">
+          Я женщина
         </a>
       </div>
     </div>
@@ -218,7 +202,7 @@
 
       <div class="whatIs back">
         <div class="container">
-          <div class="title">В чем особенность игровой программы?</div>
+          <div class="title">Почему знакомства за играми?</div>
           <div class="desc left">Вечер знакомств в формате игр это:</div>
 
           <div class="list left">
@@ -244,6 +228,8 @@
               <li>Нет желания куда-то идти и что-то делать</li>
             </ul>
           </div>
+
+          <div class="clearfix"></div>
 
           <div class="title" style="text-transform: none; color: #FE470F; font-size: 2.5rem !important;">Но наши игры все это нивелируют, вам лишь остаеться наслаждаться общением!</div>
           <a href="#registration" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Регистрация на вечер</a>
@@ -468,10 +454,10 @@
                 <div class="tickets-price">400 грн.</div>
                 <div class="tickets-price-after">350 грн.</div>
                 <div class="tickets-price-text">
-                  * при оплате до 28.08 <br><br>
+                  * при оплате до 28.07 <br><br>
                 </div>
                 <div class="tickets-button">
-                  <a href="#buy1" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
+                  <a id="buy1" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
                 </div>
               </div>
             </div>
@@ -481,11 +467,11 @@
                 <div class="tickets-price">800 грн.</div>
                 <div class="tickets-price-after">600 грн.</div>
                 <div class="tickets-price-text">
-                  хочешь прийти с другом? <br>Cкидка по 100 грн для каждого!
-                  * при оплате до 28.08
+                  хочешь прийти с <span class="male">другом</span><span class="female">подругой</span>? <br>Cкидка по 100 грн для каждого!
+                  * при оплате до 28.07
                 </div>
                 <div class="tickets-button">
-                  <a href="#buy2" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
+                  <a id="buy2" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
                 </div>
               </div>
             </div>
@@ -655,55 +641,26 @@
     </div>
   </div>
 </div>
+<div class="modal events-modal thankyou" tabindex="-1" role="dialog" id="alreadyBought">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-header">
+          <h2 class="modal-title">Спасибо за регистрацию, мы скоро с вами свяжемся!</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <h4>Подписывайтесь на нас в соцсетях, чтобы первыми узнавать про следующие мероприятия: <a href="https:facebook.com/joyoflifecommunity">JoyOfLife on FaceBook</a></h4>
+      </div>
+    </div>
+  </div>
+</div>
 
-<script>
-  $(function () {
-    $('.gender').on('click', function () {
-      var gender = $(this).attr('id');
-
-      if (gender === 'female') {
-        $('#mce-GENDER-1').attr('checked', true);
-        $('body').addClass('female');
-      } else {
-        $('#mce-GENDER-0').attr('checked', true);
-        $('body').addClass('male');
-      }
-
-      $('#choose-gender').hide();
-    });
-
-    $('#buyModal').on('show.bs.modal', function (e) {
-      var typeTicket = $(e.relatedTarget).attr('href');
-
-      if (typeTicket === '#buy2') {
-        $('#mce-TIC_TYPE').val("2");
-      } else {
-        $('#mce-TIC_TYPE').val("1");
-      }
-    });
-
-    $('#buyModal').on('hide.bs.modal', function (e) {
-      $("#mc_embed_signup > form").trigger('reset');
-    });
-
-    $('#mc_embed_signup > form').on('submit', function (e) {
-      if ($('#mce-TIC_TYPE').val() === "2") {
-        /*  redirect to 2 tickets buy */
-        setTimeout(function () {
-          // 2 tickets
-          location.assign('https://secure.wayforpay.com/button/b21cd312ca428');
-        }, 200);
-      } else {
-        /*  redirect to 1 ticket buy */
-        setTimeout(function () {
-          // 1 ticket
-          location.assign('https://secure.wayforpay.com/button/be474e83702b6');
-        }, 200);
-      }
-    });
-  });
-</script>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/src/events-picnic.js"></script>
+<script type='text/javascript' src='../js/src/mc-validate.js'></script>
 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='GENDER';ftypes[5]='radio';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
 </body>
