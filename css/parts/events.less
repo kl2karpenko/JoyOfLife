@@ -5,20 +5,31 @@
     }
 
     &.picnic408 .layout-img {
-      background-image: url('img/events/img-2.jpg');
+      background-image: url('img/events/picnic/woman.jpg');
+      background-image: url('img/events/picnic/man.jpg');
+
+      .male & {
+        background-image: url('img/events/picnic/woman.jpg');
+      }
+
+      .female & {
+        background-image: url('img/events/picnic/man.jpg');
+      }
     }
 
     .signup {
-      //background-color: rgba(256, 256, 256, 0.45);
       color: #fff !important;
 
-      .mc_embed_signup *:not(.btn) {
+      .mc_embed_signup *:not(.btn, select, [type=submit]) {
         color: #fff !important;
       }
 
       .mc_embed_signup {
         border-color: #272727 !important;
         background-color: transparent !important;
+        select {
+          color: #272727 !important;
+        }
       }
     }
 
@@ -148,8 +159,28 @@ html body.events .header-content-wrap {
   background-color: rgba(0,0,0,0.25);
   padding-top: 100px;
 
+  &.black {
+    background-color: rgba(0,0,0, 0.4);
+    .intro-text, h4 {
+      color: #fff;
+    }
+
+    .buttons {
+      margin-top: 3rem;
+    }
+  }
+
   .intro-text {
     color: #fff;
+  }
+
+  h4 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
 
   .buttons {
@@ -388,7 +419,10 @@ html body.events .header-content-wrap {
 }
 
 .registration {
-  background-color: rgba(0,0,0,0.65);
+  &:not(.white) {
+    background-color: rgba(0,0,0,0.65);
+  }
+
   padding: 4rem;
 }
 
@@ -398,4 +432,233 @@ html body.events .header-content-wrap {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
   }
+}
+
+html body .events-content {
+  font-family: 'Gabriela', "Montserrat", Helvetica, sans-serif !important;
+
+  .title {
+    font-size: 3.2rem !important;
+    line-height: 3.5rem;
+  }
+
+  .desc {
+    font-size: 1.8rem !important;
+    margin-bottom: 10px!important;
+  }
+
+  .list {
+    ul {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    position: relative;
+    z-index: 1;
+    font-size: 1.8rem;
+    color: #272727;
+    margin-bottom: 5rem;
+
+    text-align: left;
+
+    li {
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+  }
+
+  .whyDontDate {
+    //background-image: url('img/events/picnic/woman.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &-block {
+      font-size: 1.8rem;
+    }
+  }
+
+  .whatIs {
+    &.back {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    position: relative;
+
+    .title {
+      color: #fff;
+    }
+
+    * {
+      color: #fff;
+    }
+
+    .desc {
+      position: relative;
+      z-index: 1;
+      color: #fff !important;
+      font-size: 2.3rem !important;
+      margin-top: 9rem;
+      margin-bottom: 3rem !important;
+    }
+
+    *.right, *.left {
+      text-align: center !important;
+
+      li {
+        text-align: center !important;
+        margin-bottom: 3rem;
+      }
+    }
+
+    i.check-white {
+      background-image: url('img/icons/check-white.png');
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      margin: -11px 19px;
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: 776px) {
+      *.left {
+        text-align: left !important;
+
+        li {
+          text-align: left !important;
+          margin-bottom: 0;
+        }
+      }
+
+      *.right {
+        text-align: right !important;
+
+        li {
+          text-align: right !important;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      z-index: 0;
+
+
+      background-color: rgba(0, 0, 0, 0.6);
+      content: '';
+    }
+
+    &-block {
+      font-size: 1.8rem;
+    }
+  }
+
+  .mc_embed_signup {
+    form {
+      padding-left: 0 !important;
+    }
+  }
+
+  .red-border-bottom {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    text-transform: none;
+  }
+}
+
+.tickets {
+  @media screen and (min-width: 776px) {
+    padding: 3rem 4rem;
+
+    &-wrapper {
+      margin-bottom: 0;
+    }
+  }
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  color: #fff;
+  text-align: center;
+
+  &-wrapper {
+    padding: 20px;
+    margin-bottom: 3rem;
+
+    background-color: rgba(256, 256, 256, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc;
+  }
+
+  &-title {
+    font-size: 2.3rem;
+    text-align: center;
+
+    color: #fff;
+    margin-bottom: 3rem;
+  }
+
+  &-price {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+
+    color: @red;
+    text-decoration:line-through;
+
+    &-after {
+      margin-bottom: 3.6rem;
+      font-size: 3rem;
+    }
+  }
+
+  &-button {
+    margin-top: 3rem;
+  }
+}
+
+html body div.modal.events-modal {
+  &, & * {
+    color: #272727 !important;
+  }
+
+  .mc_embed_signup {
+    padding-bottom: 0 !important;
+
+    h2 {
+      padding-top: 0;
+    }
+
+    input.button[type=submit] {
+      width: 96% !important;
+      margin-bottom: 1rem;
+      color: #fff !important;
+    }
+  }
+}
+
+.whatIs.back {
+  background-image: url('img/events/picnic/woman-dark.jpg');
+  background-image: url('img/events/picnic/man-2.jpg');
+}
+
+.male .whatIs.back {
+  background-image: url('img/events/picnic/woman-dark.jpg');
+}
+
+.female .whatIs.back {
+  background-image: url('img/events/picnic/man-2.jpg');
+}
+
+.female .male {
+  display: none;
+}
+.male .female {
+  display: none;
 }

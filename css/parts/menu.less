@@ -67,23 +67,10 @@ menu {
       list-style: none;
       white-space: nowrap;
 
-      &.last {
-        text-align: right;
-
-        a {
-          color: @red;
-          font-weight: bold;
-          padding: 13px 34px;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-
       a {
-        padding: 34px 15px;
+        padding: 15px 15px;
         color: @black;
+        border-bottom: 4px solid transparent;
 
         &:not(.last).active {
           color: @red;
@@ -93,9 +80,12 @@ menu {
         transition: all 0.3s linear;
 
         &:not(.contacts):not(.active):hover {
-          text-decoration: none;
-          color: darken(@red, 20%);
-          background: rgba(254, 71, 15, 0.2);
+          text-decoration: none !important;
+          color: @red;
+          border-bottom: 4px solid @red;
+        }
+        &:hover {
+          text-decoration: none !important;
         }
       }
     }
