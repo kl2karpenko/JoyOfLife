@@ -6,7 +6,22 @@
 
   position: fixed;
 
-  background-color: #fff;
+  &:before {
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  background-image: url(img/fon1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   z-index: 1000;
 
   &-wrapper {
@@ -19,7 +34,8 @@
     text-align: center;
 
     h2 {
-      font-size: 2.5rem;
+      color: #fff;
+      font-size: 2rem;
     }
   }
 

@@ -13,7 +13,7 @@
       }
 
       .female & {
-        background-image: url('img/events/picnic/man.jpg');
+        background-image: url('img/events/picnic/man-2.jpg');
       }
     }
 
@@ -503,10 +503,14 @@ html body .events-content {
     .desc {
       position: relative;
       z-index: 1;
-      color: #fff !important;
+      color: @red !important;
       font-size: 2.3rem !important;
-      margin-top: 9rem;
       margin-bottom: 3rem !important;
+      margin-top: 3rem;
+
+      @media screen and (min-width: 776px) {
+        margin-top: 9rem;
+      }
 
       @media screen and (max-width: @sm) {
         margin-top: 2rem;
@@ -534,6 +538,7 @@ html body .events-content {
     @media screen and (min-width: 776px) {
       *.left {
         text-align: left !important;
+        max-width: 75%;
 
         li {
           text-align: left !important;
@@ -542,6 +547,8 @@ html body .events-content {
       }
 
       *.right {
+        float: right;
+        max-width: 66%;
         text-align: right !important;
 
         li {
@@ -650,6 +657,24 @@ html body div.modal.events-modal {
       color: #fff !important;
     }
   }
+
+  &.thankyou {
+    h4 {
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      margin-top: 2rem;
+
+      a {
+        color: @red !important;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+    }
+  }
 }
 
 .whatIs.back {
@@ -662,7 +687,7 @@ html body div.modal.events-modal {
 }
 
 .female .whatIs.back {
-  background-image: url('img/events/picnic/man-2.jpg');
+  background-image: url('img/events/picnic/man.jpg');
 }
 
 .female .male {

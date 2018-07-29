@@ -574,36 +574,54 @@
     </div>
   </section>
 
-</div>
 
-<footer>
-  <div class="container" id="contacts">
-    <div class="row">
-      <div class="col-md-3 company-details">
-        <div class="icon-top red-text"><a target="_blank" href="https://www.google.com.sg/maps/place/Киев, Оболонь"><img
-            src="img/footer/map25-redish.png" alt=""></a></div>
-        <div class="zerif-footer-address">Киев, Оболонь</div>
-      </div>
-      <div class="col-md-3 company-details">
-        <div class="icon-top green-text"><a href="mailto:events@joyoflifecommunity.com"><img
-            src="img/footer/envelope4-green.png" alt=""></a></div>
-        <div class="zerif-footer-email">events@joyoflifecommunity.com</div>
-      </div>
-      <div class="col-md-3 company-details">
-        <div class="icon-top blue-text"><a href="tel: +38-050-414-41-51"><img
-            src="img/footer/telephone65-blue.png" alt=""></a></div>
-        <div class="zerif-footer-phone">+38-050-414-41-51</div>
-      </div>
-      <div class="col-md-3 copyright">
-        <ul class="social">
-          <li id="facebook"><a href="https://www.facebook.com/lifejoylove"><span class="sr-only">Facebook ссылка</span>
-            <i
-                class="facebook"></i></a></li>
-        </ul><!-- .social --><p id="zerif-copyright">Joy Of Life 2018</p>
+  <footer>
+    <div class="container" id="contacts">
+      <div class="row">
+        <div class="col-md-3 company-details">
+          <div class="icon-top red-text"><a target="_blank" href="https://www.google.com.sg/maps/place/Киев, Оболонь"><img
+              src="img/footer/map25-redish.png" alt=""></a></div>
+          <div class="zerif-footer-address">Киев, Оболонь</div>
+        </div>
+        <div class="col-md-3 company-details">
+          <div class="icon-top green-text"><a href="mailto:events@joyoflifecommunity.com"><img
+              src="img/footer/envelope4-green.png" alt=""></a></div>
+          <div class="zerif-footer-email">events@joyoflifecommunity.com</div>
+        </div>
+        <div class="col-md-3 company-details">
+          <div class="icon-top blue-text"><a href="tel: +38-050-414-41-51"><img
+              src="img/footer/telephone65-blue.png" alt=""></a></div>
+          <div class="zerif-footer-phone">+38-050-414-41-51</div>
+        </div>
+        <div class="col-md-3 copyright">
+          <ul class="social">
+            <li id="facebook"><a href="https://www.facebook.com/lifejoylove"><span class="sr-only">Facebook ссылка</span>
+              <i
+                  class="facebook"></i></a></li>
+          </ul><!-- .social --><p id="zerif-copyright">Joy Of Life 2018</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+<script>
+  $(function () {
+    setTimeout(function () {
+      $('.signup.fixed').slideDown(500);
+    }, 2000);
+
+    $('#mc_embed_signup > form').on('submit', function (e) {
+      "submit"
+      if (!$('#mc_embed_signup > form .mce_inline_error:visible').length) {
+        /* if submit good */
+        $('.signup.fixed').slideUp(500);
+      }
+    });
+
+    $('body').on('click', '#mc_embed_signup-close', function () {
+      $('.signup.fixed').slideUp(500);
+    });
+  });
+</script>
 <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"0f6308b4f87a6971a3cd67ce4","lid":"58147475ea"}) })</script>
 </body>
 </html>
