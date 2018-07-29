@@ -8,7 +8,7 @@
 
   <title>Joy Of Life Events</title>
   <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../app.css?v=0.1.8">
+  <link rel="stylesheet" type="text/css" href="../app.css?v=0.2.0">
   <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
@@ -53,6 +53,14 @@
   <!-- MAILCHIMP Code -->
   <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0f6308b4f87a6971a3cd67ce4/7a6cfa747b754c6eb9dc5e168.js");</script>
   <!-- MAILCHIMP Code -->
+
+  <script>
+    $(function () {
+      if (location.pathname.indexOf('male') !== -1) {
+        $('#choose-gender').hide();
+      }
+    });
+  </script>
 </head>
 <body class="body events">
 <div class="choose-gender" id="choose-gender">
@@ -481,7 +489,7 @@
                 <div class="tickets-price">800 грн.</div>
                 <div class="tickets-price-after">600 грн.</div>
                 <div class="tickets-price-text">
-                  хочешь прийти с другом? <br>Cкидка по 100 грн для каждого!
+                  хочешь прийти с <span class="female">подругой</span><span class="male">другом</span>? <br>Cкидка по 100 грн для каждого!
                   * при оплате до 28.08
                 </div>
                 <div class="tickets-button">

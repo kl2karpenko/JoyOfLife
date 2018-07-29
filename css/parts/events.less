@@ -440,6 +440,11 @@ html body .events-content {
   .title {
     font-size: 3.2rem !important;
     line-height: 3.5rem;
+
+    @media screen and (max-width: @sm) {
+      font-size: 2.5rem!important;
+      line-height: 2.8rem;
+    }
   }
 
   .desc {
@@ -502,6 +507,10 @@ html body .events-content {
       font-size: 2.3rem !important;
       margin-top: 9rem;
       margin-bottom: 3rem !important;
+
+      @media screen and (max-width: @sm) {
+        margin-top: 2rem;
+      }
     }
 
     *.right, *.left {
