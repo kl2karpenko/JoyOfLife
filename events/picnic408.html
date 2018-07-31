@@ -8,7 +8,7 @@
 
   <title>Joy Of Life Events</title>
   <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../app.css?v=0.2.1">
+  <link rel="stylesheet" type="text/css" href="../app.css?v=0.2.2">
   <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
@@ -26,19 +26,57 @@
   <!-- End Google Tag Manager -->
 
   <!-- Facebook Pixel Code -->
-  <script src="../js/src/pixel-FB.js"></script>
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '207164343289203');
+    fbq('track', 'PageView');
+  </script>
   <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=516189328798159&ev=PageView&noscript=1"
+                 src="https://www.facebook.com/tr?id=207164343289203&ev=PageView&noscript=1"
   /></noscript>
-  <!-- End Facebook Pixel Code -->
+  <script src="../js/src/pixel-FB.js"></script>
+  <!-- Facebook Pixel Code -->
 
   <!-- MAILCHIMP Code -->
   <script id="mcjs">
     (function(){if(!window.$mcSite){$mcSite={};}})();
   </script>
   <!-- MAILCHIMP Code -->
+  <style>
+    #fb-root iframe {
+      z-index: 200 !important;
+    }
+    .choose-gender {
+      z-index: 201 !important;
+    }
+  </style>
+
 </head>
-<body class="body events">
+<body class="body events"><!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="2052180944796895"
+     theme_color="#fa3c4c"
+     logged_in_greeting="Чем мы можем вам помочь?"
+     logged_out_greeting="Чем мы можем вам помочь?">
+</div>
 <div class="choose-gender" id="choose-gender">
   <div class="choose-gender-wrapper">
     <div id="logo">
@@ -62,26 +100,19 @@
 </div>
 
 <header style="height: 84px;">
-  <menu>
+  <menu class="menu-sm">
     <div class="container">
       <div class="main-menu">
         <div id="logo">
           <a href="../index.html"><img src="../img/logo.png?v=0.1.5" alt=""></a>
         </div>
-        <ul>
-          <li><a href="../index.html">Главная</a></li>
-          <li><a href="../events.html" class="active" href="#">Мероприятия</a></li>
-        </ul>
+        <div class="row main-menu-contacts">
+          <div class="col-sm-12">
+            <a class="contacts" href="tel:+380504144151">+38-050-414-41-51</a>
+          </div>
+        </div>
       </div>
       <div class="clearfix"></div>
-      <div class="row main-menu-contacts">
-        <div class="col-sm-12 col-md-6">
-          <a class="contacts" href="tel:+380504144151">+38-050-414-41-51</a>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <a class="contacts" href="mailto:events@joyoflifecommunity.com">events@joyoflifecommunity.com</a>
-        </div>
-      </div>
     </div>
   </menu>
 </header>
@@ -92,106 +123,96 @@
   <div class="home-header-wrap">
     <div class="header-content-wrap black">
       <div class="container">
-        <h2 class="intro-text" style="margin-bottom: 3rem;">Игровые знакомства.</h2>
-        <!--<h4>4 августа, 16:00</h4>-->
-
-        <div class="intro-desc">
-          <div class="events-block-description single details">
-            <div><b><i class="fa fa-map-marker"></i>Место: </b>
-              <div>Бот. сад им. Гришко, ул. Тимирязеевська, 1</div>
-            </div>
-            <div><b><i class="fa fa-calendar"></i>Дата: </b>
-              <div>4 августа 2018, 16:00-20:00</div>
-            </div>
-            <!--<div><b><i class="fa fas fa-money-bill-alt"></i>Стоимость: </b>-->
-              <!--<div>400 грн. (программа, угощения и вход в бот. сад)</div>-->
-            <!--</div>-->
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="intro-text" style="margin-bottom: 1rem;">Игровые знакомства. Пикник в бот. саду.</h2>
+            <h3>Знакомства, общение и флирт с 10-тю и более <span class="female">мужчин</span><span class="male">женщин</span> за 1 вечер!</h3>
+            <h4>4 августа, 16:00</h4>
           </div>
-
-          <!--<br>-->
-          <!--<br>-->
-          <!--<br>-->
-          <!--<div class="events-block-description single all" style="max-width: 960px; margin-bottom: 15px; font-size: 18px;">-->
-            <!--Мы продолжаем серию наших встреч для знакомств и нетворкинга. На этот раз: природа, игры для непринужденного знакомства, и формат душевных разговоров.<br><br>-->
-
-            <!--Приглашаем вас на пикник дл знакомств, если вы устали от своих "толстых стен" дома, и не находите сил выходить из зоны комфорта. Будьте собой, и общайся с теми, кто вас услышит.<br><br>-->
-
-            <!--Наш вечер - это про общение, где вы можете рассказать о себе, о том что вы любите, ваши хобби интересы и особенности. Каждый из нас уникален, и вы можете этим поделиться именно у нас. Мы хотим быть самими собой, и делиться этим с другими людьми. В нашей обычной жизни с новыми людьми это случается очень редко.<br><br>-->
-
-            <!--Почему нам игровой формат поможет тебе в этом?<br>-->
-
-             <!-- - Потому что тебе не нужно будет думать чем заняться на нашем вечере, как подойти и заговорить первой(-вому) — мы познакомим вас друг с другом с помощью игр!<br>-->
-             <!-- - Потому что игры - это легко весело и непринуждённо - они открывают нас и снимают всю неловкость и смущение!-->
-            <!--<br>-->
+          <!--<div class="col-sm-12 col-md-6">-->
+          <!--<div class="buttons buttons-wrap">-->
+          <!--<h4>Оставьте ваш номер, и мы вам перезвоним!</h4>-->
+          <!--<form id="subscribe-call">-->
+          <!--<div class="mc-field-group">-->
+          <!--<input type="text" placeholder="+380" name="PHONE" class="required form-control" value="" id="PHONE">-->
           <!--</div>-->
-
-        <!--</div>-->
-        <div class="buttons">
-          <a href="#registration" class="btn btn-primary custom-button red-btn">Принять участие</a>
+          <!--<a id="call" class="btn btn-primary custom-button red-btn">Обратный звонок</a>-->
+          <!--</form>-->
+          <!--</div>-->
+          <!--</div>-->
+          <!--</div>-->
+          <div class="buttons" style="display: block; width: 100%;">
+            <a href="#registration" class="btn btn-primary custom-button red-btn">Принять участие!</a>
+          </div>
         </div>
-      </div>
-    </div><!-- .header-content-wrap -->
-    <div class="clear"></div>
-  </div>
+      </div><!-- .header-content-wrap -->
+      <div class="clear"></div>
+    </div>
 
     <div id="content" class="site-content events-content">
       <div class="whyDontDate">
         <div class="container">
-          <div class="title">Наш вечер для тебя, если:</div>
+          <div class="title md">Наш вечер, это игровая программа, много новых знакомств и общения и всегда новая тематика! На улице лето - а это означает: природа, пикник и отдых от городской суеты! На нашем вечере ты сможешь:</div>
+          <!--<div class="title">На нашем вечере ты сможешь:</div>-->
           <div class="male">
             <div class="row">
               <div class="col-sm-12">
                 <div class="whyDontDate-block bordered white">
-                  Тебе хочеться познакомиться с красивыми девушками.
+                  Познакомиться с 10-тю и более девушками.
                 </div>
               </div>
               <div class="col-sm-12">
                 <div class="whyDontDate-block bordered white">
-                  Ты хочешь разнообразить свою жизнь яркими эмоциями.
+                  Разнообразить свою жизнь яркими эмоциями и красками.
+                </div>
+              </div>
+              <!--<div class="col-sm-12">-->
+              <!--<div class="whyDontDate-block bordered white">-->
+              <!--Постоянные деловые встречи или работа не оставляют времени знакомствам.-->
+              <!--</div>-->
+              <!--</div>-->
+              <div class="col-sm-12">
+                <div class="whyDontDate-block bordered white">
+                  Пообщаться с реальными девушками offline.
                 </div>
               </div>
               <div class="col-sm-12">
                 <div class="whyDontDate-block bordered white">
-                  Постоянные деловые встречи или работа не оставляют времени знакомствам.
+                  Заводить разговор без смущения!
                 </div>
               </div>
-              <div class="col-sm-12">
-                <div class="whyDontDate-block bordered white">
-                  Тебе надоело общение онлайн.
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="whyDontDate-block bordered white">
-                  Ты устал от "толстых стен" дома.
-                </div>
-              </div>
+              <!--<div class="col-sm-12">-->
+              <!--<div class="whyDontDate-block bordered white">-->
+              <!--Ты устал от "толстых стен" дома.-->
+              <!--</div>-->
+              <!--</div>-->
             </div>
           </div>
           <div class="female">
             <div class="row">
               <div class="col-sm-12">
                 <div class="whyDontDate-block bordered white">
-                  Тебе хочеться познакомиться с новыми мужчинами.
+                  Пообщаться с 10-тю и более новыми мужчинами.
                 </div>
               </div>
               <div class="col-sm-12">
                 <div class="whyDontDate-block bordered white">
-                  Ты устала от "толстых стен дома" и тебе хочеться внимания.
+                  Быть в центре внимания, и знакомиться с теми, кто тебе интересен.
+                </div>
+              </div>
+              <!--<div class="col-sm-12">-->
+              <!--<div class="whyDontDate-block bordered white">-->
+              <!--Выйти в свет, найти свою любовь и готова действовать-->
+              <!--</div>-->
+              <!--</div>-->
+              <div class="col-sm-12">
+                <div class="whyDontDate-block bordered white">
+                  Пообщаться с реальными людьми.
                 </div>
               </div>
               <div class="col-sm-12">
                 <div class="whyDontDate-block bordered white">
-                  Ты хочешь найти свою любовь и готова действовать
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="whyDontDate-block bordered white">
-                  Тебе надоело общение онлайн с непонятными людьми.
-                </div>
-              </div>
-              <div class="col-sm-12">
-                <div class="whyDontDate-block bordered white">
-                  Ты хочешь разнообразить свою жизнь и получить яркие эмоции и краски!
+                  Разнообразить свою жизнь и получить яркие эмоции и краски!
                 </div>
               </div>
             </div>
@@ -202,74 +223,63 @@
 
       <div class="whatIs back">
         <div class="container">
-          <div class="title">Почему знакомства за играми?</div>
-          <div class="desc left">Вечер знакомств в формате игр это:</div>
-
+          <div class="title">Зачем мне ваш вечер знакомств?</div>
+          <!--<div class="desc left">Потому что знакомиться в обычных местах сложнее, потому что:</div>-->
           <div class="list left">
-            <ul>
-              <li><i class="check-white"></i> Общие темы для разговора и повод для знакомства!</li>
-              <li><i class="check-white"></i> Разговоры без неловкости и напряжение;</li>
-              <li><i class="check-white"></i> Атмсфера непринужденности, веселья и легкости.</li>
-            </ul>
-          </div>
-
-          <div class="desc right">Обычно для знакомств:</div>
-          <div class="list right">
-            <ul class="male">
-              <li>У нас нет времени</li>
-              <li>Не хватает смелости подойти первому</li>
-              <li>Нет желания выходить из зоны комфорта</li>
-              <li>Нет желания куда-то идти и что-то делать</li>
-            </ul>
             <ul class="female">
-              <li>У нас нет времени</li>
-              <li>Мужчинам не хватает смелости подойти первому, и они мало знакомяться</li>
-              <li>Нет желания выходить из зоны комфорта</li>
-              <li>Нет желания куда-то идти и что-то делать</li>
+              <li>На вечеринках или в клубе знакомства обычно не серйозные, и они к чему не ведут.</li>
+              <li>В кафе, ресторанах, галереях и прочих местах мужчины знакомяться редко.</li>
+              <li>Чаще всего, мы боимся сделать первый шаг, и познакомиться первой, а мужчины особенно этого бояться.</li>
+              <li>У нас уже нет желания куда-то идти и что-то делать.</li>
+            </ul>
+            <ul class="male">
+              <li>У тебя мало времени на знакомства из-за работы, но ты не хочешь тратить его впустую.</li>
+              <li>Ты не всегда можешь подойти и познакомиться первый.</li>
+              <li>Женщины стали очень закрытые - к ним очень сложно подступиться.</li>
+              <li>Нет желания идти в клубы, бары и рестораны для знакомств.</li>
             </ul>
           </div>
-
           <div class="clearfix"></div>
 
-          <div class="title" style="text-transform: none; color: #FE470F; font-size: 2.5rem !important;">Но наши игры все это нивелируют, вам лишь остаеться наслаждаться общением!</div>
-          <a href="#registration" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Регистрация на вечер</a>
+          <div class="title" style="text-transform: none; color: #FE470F; font-size: 2rem !important; line-height: 2.1rem;">Игровая программа нивелируют смущение, неловкость и первый страх знакомств!
+            Вам лишь остаеться наслаждаться общением друг с другом!</div>
         </div>
         <div class="clear"></div>
       </div>
 
-      <div class="whatHave focus">
+      <div class="tickets" id="registration">
         <div class="container">
-          <div class="title">Наши основные критерии успеха:</div>
           <div class="row">
-            <div class="col-lg-4 col-sm-6 focus-box">
-              <div>
-                <div class="service-icon" tabindex="0">
-                  <i class="check-white"></i>
+            <h2 class="title">Бронируй участие!</h2>
+            <div class="col-sm-12 col-md-6">
+              <div class="tickets-wrapper">
+                <div class="tickets-title">1 билет</div>
+                <div class="tickets-price">400 грн.</div>
+                <div class="tickets-price-after">350 грн.</div>
+                <div class="tickets-price-text">
+                  * при оплате до 01.08, после 01.08 - 400 грн. <br><br>
                 </div>
-                <h3 class="red-border-bottom">Качественная и продуманная программа вечера, скучать не прийдеться!</h3>
+                <div class="tickets-button">
+                  <a id="buy1" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
+                </div>
               </div>
             </div>
-
-            <div class="col-lg-4 col-sm-6 focus-box">
-              <div>
-                <div class="service-icon" tabindex="0">
-                  <i class="check-white"></i>
+            <div class="col-sm-12 col-md-6">
+              <div class="tickets-wrapper">
+                <div class="tickets-title">2 билета</div>
+                <div class="tickets-price">800 грн.</div>
+                <div class="tickets-price-after">600 грн.</div>
+                <div class="tickets-price-text">
+                  хочешь прийти с <span class="male">другом</span><span class="female">подругой</span>? <br>Cкидка по 100 грн для каждого!
+                  * при оплате до 01.08, после 01.08 - 800 грн.
                 </div>
-                <h3 class="red-border-bottom">Новые знакомства и пары всего лишь за 1 вечер</h3>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6 focus-box">
-              <div>
-                <div class="service-icon" tabindex="0">
-                  <i class="check-white"></i>
+                <div class="tickets-button">
+                  <a id="buy2" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
                 </div>
-                <h3 class="red-border-bottom">Настоящие разговоры и люди, которые открыты к общению и знакомствам</h3>
               </div>
             </div>
           </div>
         </div>
-        <div class="clear"></div>
       </div>
 
       <section class="photos">
@@ -320,11 +330,12 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
+          <!--<a href="#registration" style="position: relative; z-index: 1; margin-left: 22px;" class="btn btn-primary custom-button red-btn">Регистрация на вечер</a>-->
         </div>
       </section>
       <section class="testimonial " id="testimonials">
         <div class="container">
-          <div class="section-header"><h2 class="white-text">Отзывы участников прошлых встреч:</h2></div>
+          <div class="section-header"><h2 class="white-text">Отзывы участников:</h2></div>
 
           <div id="carouselComments" class="carousel carousel-comments slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -444,41 +455,6 @@
         </div>
       </section>
 
-      <div class="tickets" id="registration">
-        <div class="container">
-          <div class="row">
-            <h2 class="title">Бронируй участие!</h2>
-            <div class="col-sm-12 col-md-6">
-              <div class="tickets-wrapper">
-                <div class="tickets-title">1 билет</div>
-                <div class="tickets-price">400 грн.</div>
-                <div class="tickets-price-after">350 грн.</div>
-                <div class="tickets-price-text">
-                  * при оплате до 28.07 <br><br>
-                </div>
-                <div class="tickets-button">
-                  <a id="buy1" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <div class="tickets-wrapper">
-                <div class="tickets-title">2 билета</div>
-                <div class="tickets-price">800 грн.</div>
-                <div class="tickets-price-after">600 грн.</div>
-                <div class="tickets-price-text">
-                  хочешь прийти с <span class="male">другом</span><span class="female">подругой</span>? <br>Cкидка по 100 грн для каждого!
-                  * при оплате до 28.07
-                </div>
-                <div class="tickets-button">
-                  <a id="buy2" data-toggle="modal" data-target="#buyModal" style="position: relative; z-index: 1;" class="btn btn-primary custom-button red-btn">Заказать билет</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="whatIs">
         <div class="container">
           <div class="title">Программа вечера:</div>
@@ -486,14 +462,14 @@
           <div class="whatIs-block">
             <div class="row">
               <div class="col-sm-4 time">16:00 - 16:15</div>
-              <div class="col-sm-8">Ожидание прибытия всех участников, угощения стол для всех!</div>
+              <div class="col-sm-8">Ожидание прибытия всех участников, угощения для всех!</div>
             </div>
           </div>
           <div class="whatIs-block">
             <div class="row">
               <div class="col-sm-4 time">16:15 - 16:30</div>
               <div class="col-sm-8">
-                Каждый учасник заполняют анкету, информацию о себе, своих увлечениях и интересах для нашей следующей игры.
+                Каждый участник заполняют анкету о своих увлечениях и интересах для наших игр.
               </div>
             </div>
           </div>
@@ -510,43 +486,16 @@
             <div class="row">
               <div class="col-sm-4 time">18:00 - 18:30</div>
               <div class="col-sm-8">
-                Розыграши, призы и подарки нашим учасникам.
+                Розыграши, призы и подарки нашим участникам.
               </div>
             </div>
           </div>
           <div class="whatIs-block">
             <div class="row">
-              <div class="col-sm-4 time">18:30 - 21:00</div>
+              <div class="col-sm-4 time">18:30 - 20:00</div>
               <div class="col-sm-8">
-                Свободное время для общения и флирта.
+                Свободное время для общения и знакомств.
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="if-not">
-        <div class="container">
-          <div class="title">Есть сомнения?</div>
-          <div class="if-not-block bordered">
-            <div class="name">Я уже был(-а) на таких встречах, и никого не встретил(-а).</div>
-            <div class="description">Мы не сразу можем найти кого-то, кто нам подходит, но если не искать - то ты и не
-              найдешь!
-            </div>
-          </div>
-          <div class="if-not-block bordered">
-            <div class="name">У меня нету времени ходить на такие встречи.</div>
-            <div class="description">Время есть всегда, вопрос в том, чем мы выбираем заняться, если ты хочешь новых
-              знакомств, для этого нужно находить время и возможности.
-            </div>
-          </div>
-          <div class="if-not-block bordered">
-            <div class="name">На такие вечеринки приходят не мои люди, и вообще туда не ходят красивые девушки или
-              уверенные в себе мужчины!
-            </div>
-            <div class="description">Не правда! На таких встречах часто можно встретить тех, кто много работает и
-              занимается собой, и у кого нет времени на поиски, твой человек там будет, нужно смотреть, искать и
-              пробовать!
             </div>
           </div>
         </div>
@@ -560,24 +509,24 @@
       <div class="row">
         <div class="col-md-3 company-details">
           <div class="icon-top red-text"><a target="_blank" href="https://www.google.com.sg/maps/place/Киев, Оболонь"><img
-              src="../img/footer/map25-redish.png" alt=""></a></div>
+                  src="../img/footer/map25-redish.png" alt=""></a></div>
           <div class="zerif-footer-address">Киев, Оболонь</div>
         </div>
         <div class="col-md-3 company-details">
           <div class="icon-top green-text"><a href="mailto:events@joyoflifecommunity.com"><img
-              src="../img/footer/envelope4-green.png" alt=""></a></div>
+                  src="../img/footer/envelope4-green.png" alt=""></a></div>
           <div class="zerif-footer-email">events@joyoflifecommunity.com</div>
         </div>
         <div class="col-md-3 company-details">
           <div class="icon-top blue-text"><a href="tel: +38-050-414-41-51"><img
-              src="../img/footer/telephone65-blue.png" alt=""></a></div>
+                  src="../img/footer/telephone65-blue.png" alt=""></a></div>
           <div class="zerif-footer-phone">+38-050-414-41-51</div>
         </div>
         <div class="col-md-3 copyright">
           <ul class="social">
             <li id="facebook"><a href="https://www.facebook.com/lifejoylove"><span class="sr-only">Facebook ссылка</span>
               <i
-                  class="facebook"></i></a></li>
+                      class="facebook"></i></a></li>
           </ul><!-- .social --><p id="zerif-copyright">Joy Of Life 2018</p>
         </div>
       </div>
@@ -598,8 +547,7 @@
               <h2>Принять участие!</h2>
               <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
               <div class="mc-field-group">
-                <label for="mce-EMAIL">Email  <span class="asterisk">*</span>
-                </label>
+                <label for="mce-EMAIL">Email  <span class="asterisk">*</span></label>
                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
               </div>
               <div class="mc-field-group">
@@ -609,7 +557,7 @@
               <div class="mc-field-group">
                 <label for="mce-PHONE">Номер телефона <span class="asterisk">*</span>
                 </label>
-                <input type="text" name="PHONE" class="required" value="" id="mce-PHONE">
+                <input type="text" name="PHONE" class="required form-control" value="" id="mce-PHONE">
               </div>
               <div class="mc-field-group input-group" style="visibility: hidden; margin: -25px; opacity: 0; height: 0px;">
                 <strong>Пол  <span class="asterisk">*</span>
@@ -659,7 +607,7 @@
 
 <script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="../js/src/events-picnic.js"></script>
+<script src="../js/src/events-picnic.js?v=0.0.1"></script>
 <script type='text/javascript' src='../js/src/mc-validate.js'></script>
 <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='GENDER';ftypes[5]='radio';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
