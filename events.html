@@ -8,7 +8,7 @@
 
   <title>Joy Of Life Events</title>
   <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="app.css?v=0.2.0">
+  <link rel="stylesheet" type="text/css" href="app.css?v=0.2.5">
   <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -27,38 +27,46 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WT7J58G');</script>
   <!-- End Google Tag Manager -->
+
   <!-- Facebook Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '516189328798159');
-    fbq('track', 'PageView');
-  </script>
   <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=516189328798159&ev=PageView&noscript=1"
+                 src="https://www.facebook.com/tr?id=207164343289203&ev=PageView&noscript=1"
   /></noscript>
-  <!-- End Facebook Pixel Code -->
+  <script src="js/src/pixel-FB.js?v=0.0.2"></script>
+  <!-- Facebook Pixel Code -->
+
   <!-- MAILCHIMP Code -->
   <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0f6308b4f87a6971a3cd67ce4/7a6cfa747b754c6eb9dc5e168.js");</script>
   <!-- MAILCHIMP Code -->
-  <script>
-    fbq('track', 'ViewContent');
-  </script>
-
 </head>
 <body class="body">
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="2052180944796895"
+     theme_color="#fa3c4c"
+     logged_in_greeting="Чем мы можем вам помочь?"
+     logged_out_greeting="Чем мы можем вам помочь?">
+</div>
+<!-- Load Facebook SDK for JavaScript -->
+
 <header style="height: 84px;">
   <menu>
     <div class="container">
       <div class="main-menu">
         <div id="logo">
-          <a href="index.html"><img src="img/logo.png?v=0.1.5" alt=""></a>
+          <a href="index.html"><img src="img/logo.png?v=0.1.7" alt=""></a>
         </div>
         <ul>
           <li><a href="index.html">Главная</a></li>
@@ -88,7 +96,7 @@
       <div class="events-wrapper">
         <a class="events-block white" href="events/picnic408.html">
           <div class="container">
-            <div class="events-time">4 августа 2018, 17:00-20:00</div>
+            <div class="events-time">4 августа 2018, 16:00-20:00</div>
             <div class="events-name">Игровые знакомства. Пикник в ботаническом саду.</div>
             <span class="btn red-btn btn-lg">Детали меропрятия</span>
           </div>

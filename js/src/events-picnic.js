@@ -17,8 +17,6 @@ $(function () {
   $('#buyModal').on('show.bs.modal', function (e) {
     var typeTicket = $(e.relatedTarget).attr('id');
 
-    console.log(typeTicket, " typeTicket");
-
     if (typeTicket === 'buy2') {
       $('#mce-TIC_TYPE').val("2");
     } else {
@@ -36,12 +34,39 @@ $(function () {
     $('#mc-embedded-subscribe').data('click', false);
   });
 
+  $('#call').click(function(){
+    var name = $('#name').val();
+    var phone = $('#phone').val();
+
+    //Если поля заполнены, то отправляем данные
+    if(name != '' && phone != '') {
+      $.post("../../callback.php",{
+        name: name,
+        phone: phone
+      },function success(data){
+        alert('Мы скоро с вами свяжемся!');
+        $('#subscribe-call').trigger('reset');
+      });
+
+      $('#subscribe-call').trigger('reset');
+
+    } else {
+      alert('Пожалуйста заполните все поля формы =)');
+    }
+
+  });
+
   $('#buyModal').on('hide.bs.modal', function (e) {
+    console.log("hide");
     $("#mc_embed_signup > form").trigger('reset');
   });
 
   $('#mc_embed_signup > form').on('submit', function (e) {
     if (!$('#mc_embed_signup > form .mce_inline_error:visible').length) {
+
+      fbq('track', 'CompleteRegistration', {
+        value: 'facebook'
+      });
       /* DOnt redirect to payment
        * =================== */
       if ($('#mc-embedded-subscribe').data('click')) {
@@ -63,10 +88,13 @@ $(function () {
           setTimeout(function () {
             // 1 ticket
             $("#mc_embed_signup > form").trigger('reset');
-            location.assign('https://secure.wayforpay.com/button/be474e83702b6');
+            location.assign('https://secure.wayforpay.com/button/b3cf5d6e8007d');
           }, 200);
         }
       }
+    } else {
+      $("#mc_embed_signup > form").trigger('reset');
+      alert('Поля были заполнены неправильно, пожалуйста проверьте правильность почты и телефонного номера!')
     }
   });
 });

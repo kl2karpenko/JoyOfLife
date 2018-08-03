@@ -8,7 +8,7 @@
 
   <title>Joy Of Life</title>
   <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="app.css?v=0.2.0">
+  <link rel="stylesheet" type="text/css" href="app.css?v=0.2.5">
   <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -29,31 +29,40 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WT7J58G');</script>
   <!-- End Google Tag Manager -->
+
   <!-- Facebook Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '516189328798159');
-    fbq('track', 'PageView');
-  </script>
   <noscript><img height="1" width="1" style="display:none"
-                 src="https://www.facebook.com/tr?id=516189328798159&ev=PageView&noscript=1"
+                 src="https://www.facebook.com/tr?id=207164343289203&ev=PageView&noscript=1"
   /></noscript>
-  <!-- End Facebook Pixel Code -->
+  <script src="js/src/pixel-FB.js?v=0.0.2"></script>
+  <!-- Facebook Pixel Code -->
+
   <!-- MAILCHIMP Code -->
   <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0f6308b4f87a6971a3cd67ce4/7a6cfa747b754c6eb9dc5e168.js");</script>
   <!-- MAILCHIMP Code -->
-  <script>
-    fbq('track', 'ViewContent');
-  </script>
 </head>
 <body class="body">
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="2052180944796895"
+     theme_color="#fa3c4c"
+     logged_in_greeting="Чем мы можем вам помочь?"
+     logged_out_greeting="Чем мы можем вам помочь?">
+</div>
+<!-- Load Facebook SDK for JavaScript -->
+
 <div class="layout-img"></div>
 <header>
   <menu>
@@ -61,7 +70,7 @@
       <div class="main-menu">
         <div id="logo">
           <a href="index.html">
-            <img src="img/logo.png?v=0.1.5" alt="">
+            <img src="img/logo.png?v=0.1.7" alt="">
           </a>
         </div>
         <ul>
@@ -326,9 +335,9 @@
                           <a class="client-name">Анна Сподаренко</a>
                         </div>
                       </div>
-                      <!--<div class="client-image hidden-xs">-->
-                      <!--<img src="img/whowe/natali-min.jpg" alt="">-->
-                      <!--</div>-->
+                      <div class="client-image hidden-xs">
+                        <img src="img/comments/anna.jpg" alt="">
+                      </div>
                       <div class="clearfix"></div>
                     </div>
                   </div>
@@ -345,14 +354,13 @@
                         <div class="client-info">
                           <a class="client-name">Nekit Dubchak</a>
                         </div>
-                        <!--<div class="client-image hidden-xs">-->
-                        <!--<img src="img/whowe/natali-min.jpg" alt="">-->
-                        <!--</div>-->
+                        <div class="client-image hidden-xs">
+                          <img src="img/comments/nekit.jpg" alt="">
+                        </div>
                       </div>
                       <div class="clearfix"></div>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -375,9 +383,9 @@
                           <a class="client-name">Таня Дегтярёва</a>
                         </div>
                       </div>
-                      <!--<div class="client-image hidden-xs">-->
-                      <!--<img src="img/whowe/natali-min.jpg" alt="">-->
-                      <!--</div>-->
+                      <div class="client-image hidden-xs">
+                        <img src="img/comments/tanya.jpg" alt="">
+                      </div>
                       <div class="clearfix"></div>
                     </div>
                   </div>
@@ -395,9 +403,9 @@
                         <div class="client-info">
                           <a class="client-name">Oksana Kovalenko</a>
                         </div>
-                        <!--<div class="client-image hidden-xs">-->
-                        <!--<img src="img/whowe/natali-min.jpg" alt="">-->
-                        <!--</div>-->
+                        <div class="client-image hidden-xs">
+                          <img src="img/comments/oksana.jpg" alt="">
+                        </div>
                       </div>
                       <div class="clearfix"></div>
                     </div>
@@ -423,10 +431,10 @@
   <section class="our-team " id="team">
     <div class="container">
       <div class="section-header">
-        <h2 class="dark-text">Кто мы и почему?</h2></div>
+        <h2 class="dark-text">Почему мы делаем такие встречи?</h2></div>
       <div class="row" data-scrollreveal="enter left after 0s over 0.1s" data-sr-init="true"
            data-sr-complete="true">
-        <div class="col-lg-6 col-sm-12 team-box">
+        <div class="col-sm-12 team-box">
           <div class="team-member" tabindex="0">
             <div class="float-left">
               <figure class="profile-pic">
@@ -446,26 +454,6 @@
                 <br><br>Приходи к нам и ты увидишь, что познакомиться без барьеров - легко.
               </div>
               <h3 class="dark-text red-border-bottom">Лилия Карпенко</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-sm-12 team-box">
-          <div class="team-member" tabindex="0">
-            <div class="float-left">
-              <figure class="profile-pic">
-                <img src="img/whowe/natali-min.jpg" alt="" style="max-width: 136%; display: block; margin-left: -15%;">
-              </figure>
-            </div>
-            <div class="member-details">
-              <div class="position">Привет, я Натали и давно, успешно организовываю мероприятия – для взрослых и детей, для семейной аудитории и элитной публики.
-                <br><br>Мне всегда хотелось бы создавать такие ивенты, на которых люди могли бы знакомиться,
-                находить друг друга, общаться, влюбляться, создавать семьи и рождать детей!
-                <br><br>Я мечтаю о том, что люди вместе с нами станут чуть более счастливыми, они смогут больше открывать для себя, больше общаться
-                и даже путешествовать вместе в другие города и страны!
-                <br><br>У нас большие планы!
-              </div>
-              <h3 class="dark-text red-border-bottom">Натали Власюк</h3>
             </div>
           </div>
         </div>
@@ -603,6 +591,7 @@
       </div>
     </div>
   </footer>
+</div>
 <script>
   $(function () {
     setTimeout(function () {
