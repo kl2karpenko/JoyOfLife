@@ -4,8 +4,13 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('./package.json'),
     uglify: {
+      options: {
+        reserved: ['jQuery', '$'],
+        sourceMap: true,
+        sourceMapName: '<%= pkg.name %>.map'
+      },
       build: {
-        src: ['./js/src/**.js'],
+        src: ['./js/jquery.js', './js/bootstrap.min.js','./js/analitics.js', './js/src/**.js'],
         dest: '<%= pkg.name %>.min.js'
       }
     },

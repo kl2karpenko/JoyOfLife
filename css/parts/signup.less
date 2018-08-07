@@ -153,27 +153,56 @@ html .registration .mc_embed_signup input[type=button] {
 }
 
 .signup {
-  background: rgba(0,0,0,0.6);
+  background: #333;
   padding: 4rem 1rem;
 
   &.fixed {
     display: none;
 
+    @media screen and (max-width: @md) {
+      top: 0;
+      padding: 0;
+      padding-top: 14px;
+    }
+
     position: fixed;
-    z-index: 3;
+    z-index: 100;
     background-color: rga(256, 256, 256, 0.6);
 
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0 2rem;
+    padding: 0;
+
+    @media screen and (min-width: 375px) {
+      .col-6 {
+        margin-bottom: 25px;
+      }
+
+      .mc_embed_signup {
+        h2 {
+          font-size: 1.5rem;
+          margin-top: 25px !important;
+        }
+      }
+    }
 
     .mc_embed_signup {
+      padding: 0 !important;
       padding-top: 5px !important;
       background: transparent;
 
       h2 {
-        font-size: 1.5rem!important;
+        font-size: 1.2rem!important;
+        padding: 0 !important;
+        margin-top: 10px;
+      }
+    }
+
+    .container {
+      @media screen and (max-width: @md) {
+        width: 100%;
+        padding: 10px;
       }
     }
   }
@@ -186,6 +215,13 @@ html .registration .mc_embed_signup input[type=button] {
   overflow: hidden;
   position: absolute;
   right: 10px;
+  top: 10px;
+  z-index: 3;
+
+  @media screen and (max-width: 374px) {
+    width: 25px;
+    height: 25px;
+  }
 
   &:hover {
     &::before, &::after {
@@ -217,4 +253,10 @@ html .registration .mc_embed_signup input[type=button] {
 
 .mc_embed_signup #mce-success-response {
   font-size: 1.6rem;
+}
+
+body.signup-show {
+  .fb_reset>div {
+    display: none !important;
+  }
 }

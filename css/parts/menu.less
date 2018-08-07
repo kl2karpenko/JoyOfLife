@@ -10,8 +10,24 @@ menu {
   box-shadow: 0 0 3px #333;
   padding-left: 0 !important;
 
-  &:not(.menu-sm) {
-    height: 125px;
+
+  @media screen and (max-width: @sm) {
+    position: relative;
+    & + .header-content-wrap {
+      margin-top: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: @md) {
+    &:not(.menu-sm) {
+      height: 134px;
+    }
+  }
+
+  @media screen and (min-width: @md) {
+    &:not(.menu-sm) {
+      height: 125px;
+    }
   }
 
   &.menu-sm {

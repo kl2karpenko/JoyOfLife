@@ -16,6 +16,7 @@ body {
 
 @url: '';
 
+@import (inline) "jquery.mobile-1.4.5.min.css";
 @import (inline) "boot/bootstrap.min.css";
 @import (inline) "boot/bootstrap-grid.min.css";
 @import (inline) "boot/bootstrap-reboot.min.css";
@@ -45,6 +46,10 @@ body {
 @md: 992px;
 @sm: 450px;
 
+a, button, .btn, .button {
+  cursor: pointer;
+}
+
 .modal {
   background: rgba(0,0,0,0.75);
 }
@@ -71,6 +76,8 @@ body {
     background-image: url('img/gifts.jpg');
   }
 }
+
+
 
 .modal:not(.events-modal) {
   color: #272727 !important;
