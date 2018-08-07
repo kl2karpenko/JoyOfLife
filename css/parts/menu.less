@@ -8,8 +8,40 @@ menu {
   background: #fff;
   margin: 0;
   box-shadow: 0 0 3px #333;
-  height: 125px;
   padding-left: 0 !important;
+
+  &:not(.menu-sm) {
+    height: 125px;
+  }
+
+  &.menu-sm {
+    .main-menu-contacts {
+      padding: 1rem 0;
+
+      @media screen and (max-width: 776px) {
+        width: 100%;
+        display: block;
+      }
+
+      > div {
+        text-align: right !important;
+
+        a {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 1.4rem;
+          padding-right: 0 !important;
+        }
+      }
+    }
+
+    #logo {
+      margin-bottom: -27px;
+      @media screen and (min-width: 776px) {
+        float: left;
+      }
+    }
+  }
 
   #logo {
     display: inline-block;
@@ -84,6 +116,7 @@ menu {
           color: @red;
           border-bottom: 4px solid @red;
         }
+
         &:hover {
           text-decoration: none !important;
         }
@@ -177,7 +210,7 @@ menu {
             display: none;
           }
 
-          display: block;
+          display: inline-block;
           padding: 0 0 0 10px!important;
           padding-right: 0 !important;
 
@@ -200,6 +233,6 @@ menu {
   }
 
   @media screen and (max-width: 776px) {
-    height: 135px;
+    height: 114px;
   }
 }

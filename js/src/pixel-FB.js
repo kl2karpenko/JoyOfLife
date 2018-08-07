@@ -6,8 +6,18 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
+/* picnic event id */
+fbq('init', '207164343289203');
 fbq('init', '516189328798159');
-fbq('track', 'PageView');
 
-fbq('track', 'Lead');
-fbq('track', 'ViewContent');
+fbq('track', 'Lead', {
+  value: 'facebook'
+});
+
+fbq('track', 'PageView', {
+  value: 'facebook'
+});
+
+fbq('track', 'ViewContent', {
+  value: 'facebook'
+});
