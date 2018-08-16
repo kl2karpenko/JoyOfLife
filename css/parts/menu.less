@@ -33,23 +33,35 @@ menu {
   &.menu-sm {
     .main-menu-contacts {
       padding: 1rem 0;
+      text-align: right !important;
 
-      @media screen and (max-width: 776px) {
-        width: 100%;
-        display: block;
+      a {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 1.4rem;
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+
+        text-align: center;
       }
 
       > div {
         text-align: right !important;
+      }
 
-        a {
-          display: inline-block;
-          font-weight: bold;
-          font-size: 1.4rem;
-          padding-right: 20px !important;
-          padding-left: 20px !important;
+      @media screen and (max-width: 776px) {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: block;
 
-          text-align: center;
+        & > div {
+          text-align: right !important;
+          padding-right: 0 !important;
+
+          a {
+            font-size: 1rem;
+          }
         }
       }
     }
