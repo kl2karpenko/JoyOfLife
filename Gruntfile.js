@@ -12,6 +12,10 @@ module.exports = function(grunt) {
       build: {
         src: ['./js/jquery.js', './js/bootstrap.min.js','./js/analitics.js', './js/src/**.js'],
         dest: '<%= pkg.name %>.min.js'
+      },
+      knockout: {
+        src: ['./js/knockout/**.js'],
+        dest: './js/knockout-lib.min.js'
       }
     },
     less: {

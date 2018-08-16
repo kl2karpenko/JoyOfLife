@@ -16,6 +16,11 @@
       }
     }
 
+    &.roof109 .layout-img {
+      background-color: #fff;
+      background-image: url('img/events/roof109/back.jpg');
+    }
+
     .signup {
       color: #fff !important;
 
@@ -33,7 +38,7 @@
     }
 
     h1 {
-      text-transform: uppercase;
+      //text-transform: uppercase;
       font-weight: bold;
 
       padding-top: 8rem;
@@ -73,6 +78,36 @@
 
     *, .events-time, .events-name {
       color: #272727;
+    }
+
+    &.red {
+      background-color: rgba(254, 71, 15, 0.65);
+
+      *, .events-time, .events-name {
+        color: #fff !important;
+      }
+
+      .btn {
+        background-color: #272727 !important;
+        color: #fff !important;
+        border-color: #333 !important;
+      }
+
+      &:hover {
+        background-color: rgba(254, 71, 15, 0.3);
+        text-decoration: none !important;
+        color: #272727 !important;
+
+        *, .events-time, .events-name {
+          color: #fff !important;
+        }
+
+        .btn {
+          background-color: @red !important;
+          color: #fff !important;
+          border-color: @red !important;
+        }
+      }
     }
 
     &-img {
@@ -392,7 +427,7 @@ html body.events {
   border: none;
   border-radius: 4px;
   font-size: 1.3rem;
-  text-transform: uppercase;
+  //text-transform: uppercase;
 }
 
 .events-block-description div span {

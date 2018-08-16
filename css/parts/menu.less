@@ -26,7 +26,7 @@ menu {
 
   @media screen and (min-width: @md) {
     &:not(.menu-sm) {
-      height: 125px;
+      height: 132px;
     }
   }
 
@@ -46,7 +46,10 @@ menu {
           display: inline-block;
           font-weight: bold;
           font-size: 1.4rem;
-          padding-right: 0 !important;
+          padding-right: 20px !important;
+          padding-left: 20px !important;
+
+          text-align: center;
         }
       }
     }
@@ -64,6 +67,7 @@ menu {
     position: relative;
     height: 84px;
     padding: 12px 15px;
+    padding-left: 0;
     line-height: 60px;
     text-align: center;
 
@@ -76,6 +80,7 @@ menu {
 
   .main-menu-contacts {
     text-align: center;
+    margin-top: 6px;
 
     > div {
       &:first-child {
@@ -88,9 +93,11 @@ menu {
     }
 
     a {
-      color: @red;
+      background: @red;
+      color: #fff;
+      border-radius: 4px;
       font-weight: bold;
-      padding: 13px 34px;
+      padding: 8px 34px;
       transition: all 0.3s linear;
 
       &:hover {
@@ -147,12 +154,6 @@ menu {
   @media screen and (max-width: @lg) {
     height: 120px;
     text-align: center;
-
-    .main-menu-contacts {
-      > div {
-        text-align: center !important;
-      }
-    }
 
     ul.last {
       display: block;
@@ -250,5 +251,11 @@ menu {
 
   @media screen and (max-width: 776px) {
     height: 114px;
+
+    .main-menu-contacts {
+      > div:last-child {
+        display: none;
+      }
+    }
   }
 }
