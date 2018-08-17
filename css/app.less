@@ -1,10 +1,20 @@
 body {
   color: #000;
   margin: 0 !important;
-  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-family: 'Google Sans', sans-serif !important;
   font-size: 16px;
 
   overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('css/fonts/GoogleSans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('css/fonts/GoogleSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('css/fonts/GoogleSans-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('css/fonts/GoogleSans-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('css/fonts/GoogleSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('css/fonts/GoogleSans-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 @media screen and (max-width: @md) {
@@ -16,12 +26,11 @@ body {
 
 @url: '';
 
-@import (inline) "normalize.css";
 @import (inline) "boot/bootstrap.min.css";
 @import (inline) "boot/bootstrap-grid.min.css";
 @import (inline) "boot/bootstrap-reboot.min.css";
 @import (inline) "parts/fontawesome.css";
-//@import (inline) "icons/mobirise-icons.css";
+@import (inline) "icons/mobirise-icons.css";
 
 @import "parts/btn";
 @import "parts/menu";
