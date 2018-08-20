@@ -1,4 +1,30 @@
+.roof-wrap {
+  body:not(.male):not(.female) {
+    overflow: hidden;
+  }
+}
+
+html {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 html .roof109 {
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    menu {
+      height: auto !important;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: @smd) {
+    .main-menu-contacts a {
+      margin-bottom: 6px;
+    }
+  }
+
   .home-header-wrap {
     @media screen and (min-width: @md) {
       text-align: right;
@@ -9,12 +35,20 @@ html .roof109 {
     }
 
     .header-content-wrap {
-      padding-top: 7rem;
-      padding-bottom: 2rem;
+      padding-top: 2.7rem;
+      padding-bottom: 1rem;
+    }
+
+    h2 {
+      line-height: 3rem;
     }
 
     h5 {
       margin-bottom: 15px;
+
+      @media screen and (max-width: @smd) {
+        margin-bottom: 3rem;
+      }
     }
 
     h4 {
@@ -28,24 +62,185 @@ html .roof109 {
       }
     }
 
+    .title.md {
+      margin-bottom: 1rem;
+    }
+
     .mc_embed_signup {
       background-color: transparent;
       border: 1px solid #fff;
+    }
+
+    .modal .mc_embed_signup #mc_embed_signup_scroll {
+      h3 {
+        font-family: 'Gabriela', serif !important;
+        color: @red !important;
+        text-decoration: none;
+      }
+
+      .button.block {
+        margin-left: -17px !important;
+      }
     }
   }
 
   .focus {
     background: rgba(71, 71, 71, 0.75) !important;
+
+    &-box {
+      .fas {
+        font-size: 80px;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  .events-content .whatIs {
+    &:before {
+      background-color: rgba(256, 256, 256, 0.2) !important;
+    }
+
+    &-block {
+      background-color: #272727;
+    }
+  }
+
+  .response {
+    color: @red;
+
+    text-align: center;
+
+    width: 100%;
+    padding: 0;
+    font-size: 1.5rem;
   }
 
   .tickets {
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    font-family: 'Gabriela', serif !important;
+
+    .container {
+      @media screen and (min-width: 990px) {
+        width: 863px;
+      }
+    }
+    
+    .title {
+      color: #fff;
+      margin-bottom: 5rem !important;
+    }
+
     .tickets-wrapper {
-      box-shadow: 0 0 3px #272727;
-      background-color: rgba(254, 71, 15, 0.65);
+      max-width: 550px;
+      @media screen and (min-width: 900px) {
+        width: 430px;
+      }
+
+      @media screen and (max-width: @md) {
+        margin-bottom: 2rem;
+      }
+
+      display: inline-block;
+      margin: 0 auto;
+      box-shadow: none;
+      border: 0;
+      background-color: rgba(256, 256, 256, 1);
+
+      sup {
+        font-size: 1rem;
+        top: -1.5rem;
+      }
+
+      .custom-button {
+        padding: 11px 18px;
+      }
+
+      .tickets-title {
+        margin-bottom: 2rem;
+        color: #272727;
+        position: relative;
+        z-index: 1;
+        text-align: left !important;
+        
+        &:after {
+          z-index: 1;
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 80%;
+          color: #272727;
+          bottom: -6px;
+          right: 0;
+        }
+      }
+
+      .tickets-arrow {
+        margin-top: 1rem;
+        margin-right: 20px;
+        margin-left: 1rem;
+
+        .fa-money-bill {
+          float: left;
+          opacity: 0.3;
+          font-size: 60px;
+          color: @red;
+          margin: 14px;
+        }
+      }
+
+      .inb {
+        display: inline-block;
+        min-width: 262px;
+        white-space: nowrap;
+      }
 
       .tickets-price {
+        text-decoration: none;
         color: #272727;
+
+        position: relative;
+
+        &:after {
+          content: '';
+          height: 2px;
+          width: 150px;
+          background-color: #272727;
+          position: absolute;
+
+          top: 26px;
+          left: 50%;
+          margin-left: -75px;
+          right: 0;
+          transform: rotate(12deg);
+        }
       }
+
+      .tickets-price-after {
+        margin-bottom: -1.2rem;
+        font-size: 4rem;
+        font-weight: bold;
+
+        sup {
+          top: -2.5rem;
+        }
+      }
+
+      .tickets-price-text {
+        margin-bottom: 4rem;
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+
+      }
+
+      .tickets-price-after,
+      .tickets-price-text {
+        color: @red !important;
+      }
+      
     }
   }
 
@@ -61,14 +256,67 @@ html .roof109 {
     .desc.left {
       font-family: 'Gabriela', serif !important;
       margin-top: -20px!important;
-      font-size: 1.7rem !important;
-      color: #b5b0b0 !important;
+
+      font-size: 1.4rem !important;
+      line-height: 1.4rem;
+
+      color: #272727 !important;
+      //color: #b5b0b0 !important;
       text-align: center !important;
     }
 
     .list {
       ul > li {
         color: #272727;
+      }
+
+      ul {
+        font-family: 'Gabriela', sans-serif;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+          list-style-type: none;
+          flex-basis: 22%;
+          width: 22%;
+
+          text-align: center !important;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+
+          flex-direction: column;
+          align-content: space-between;
+          flex-wrap: wrap;
+
+          border-radius: 5px;
+          min-height: 200px;
+
+          //box-shadow: 0 0 3px #efefef;
+          color: #b5b0b0 !important;
+          //color: @red;
+
+          font-size: 1.3rem;
+          line-height: 1.4rem;
+
+          * {
+            color: @red;
+          }
+
+          i {
+            font-size: 60px;
+            margin-bottom: 20px;
+          }
+
+          @media screen and (max-width: @md) {
+            flex-basis: 50%;
+            width: 50%;
+            margin-left: 0;
+            height: 250px;
+          }
+        }
       }
     }
   }
@@ -95,4 +343,202 @@ html .roof109 {
       margin-bottom: 3rem;
     }
   }
+
+  .focus {
+    .title {
+      margin-top: 1rem !important;
+    }
+  }
+
+  .timer {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #fff;
+
+    .countdown-cont {
+      max-width: 700px;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      color: #272727;
+
+      font-size: 3rem !important;
+      line-height: 3rem;
+    }
+
+    @media screen and (max-width: 560px) {
+      .col-sm-6 {
+        text-align: center;
+      }
+    }
+
+    .number-wrap {
+      font-family: 'Gabriela', sans-serif;
+      color: #232323;
+      border-color: #ffffff26;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      padding: 5px 10px 13px 10px;
+      margin: 0;
+      min-width: 118px;
+      border-radius: 2px;
+      max-width: 100%;
+
+      @media screen and (max-width: 560px) {
+        .number-wrap {
+          margin-bottom: 15px;
+        }
+      }
+
+      .number {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 55px;
+        text-transform: none;
+        letter-spacing: -2px;
+        word-spacing: 0;
+        line-height: 1.3;
+        color: #fe470f;
+      }
+
+      .period {
+        display: block;
+        padding-top: 2px;
+        border-top: 1px solid #efefef;
+      }
+
+      .dot {
+        position: absolute;
+        top: -10px;
+        right: -1em;
+        width: 1em;
+        display: block;
+        height: 83%;
+        overflow: hidden;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 89.65px;
+        text-transform: none;
+        letter-spacing: 0;
+        word-spacing: 0;
+        color: #fe470f;
+
+        @media screen and (max-width: 560px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hidden {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    visibility: hidden;
+  }
+
+  .programm {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #333;
+    //background-color: rgba(254,71,15,0.7);
+
+    .title {
+      text-align: center;
+      font-size: 4rem;
+      color: #fff;
+      margin-bottom: 4rem;
+    }
+
+    ol {
+      list-style: none;
+      max-width: 700px;
+      margin: 0 auto;
+
+    li {
+        margin-bottom: 1.7rem;
+        font-family: 'Gabriela', sans-serif;
+        position: relative;
+
+        padding-left: 50px;
+
+        .counter {
+          position: absolute;
+          left: -35px;
+          display: inline-block;
+          text-align: center;
+          margin: -6px 10px;
+          line-height: 40px;
+          transition: all .2s;
+          color: #fff;
+          background: #fe470f;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+
+        color: #fff;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+
+        strong {
+          margin-right: 15px;
+          margin-bottom: 10px;
+          display: block;
+          width: 100%;
+        }
+
+        span {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+#up {
+  .fa {
+    font-size: 50px;
+    color: @red;
+    transition: all 0.2s ease-in-out;
+  }
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+  position: fixed;
+
+  &:hover {
+    .fa {
+      color: #272727;
+    }
+  }
+
+  width: 50px;
+  height: 50px;
+
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+}
+
+.male.roof109 .list ul.male {
+  display: flex !important;
+}
+.female.roof109 .list ul.female {
+  display: flex !important;
+}
+
+.female.roof109 .list ul.male {
+  display: none !important;
+}
+
+.male.roof109 .list ul.female {
+  display: none !important;
 }
