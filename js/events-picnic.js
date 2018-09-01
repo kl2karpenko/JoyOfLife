@@ -51,6 +51,8 @@ $(function () {
         value: 'facebook'
       });
 
+      let coupon = $('#coupon').val().trim();
+
       /* DOnt redirect to payment
        * =================== */
       if ($('#mc-embedded-subscribe-call').data('click')) {
@@ -64,15 +66,27 @@ $(function () {
           /*  redirect to 2 tickets buy */
           setTimeout(function () {
             // 2 tickets
+
             $("#mc_embed_signup > form").trigger('reset');
-            location.assign('https://secure.wayforpay.com/button/b3cf5d6e8007d');
+            if (coupon && coupon.indexOf("loveTerraceEdition") !== -1) {
+              // redirect to page with discount
+              location.assign('https://secure.wayforpay.com/button/b5c2cce33140d');
+            } else {
+              location.assign('https://secure.wayforpay.com/button/b3cf5d6e8007d');
+            }
           }, 200);
         } else {
           /*  redirect to 1 ticket buy */
           setTimeout(function () {
             // 1 ticket
             $("#mc_embed_signup > form").trigger('reset');
-            location.assign('https://secure.wayforpay.com/button/be474e83702b6');
+
+            if (coupon && coupon.indexOf("loveTerraceEdition") !== -1) {
+              // redirect to page with discount
+              location.assign('https://secure.wayforpay.com/button/b7c351b957d9f');
+            } else {
+              location.assign('https://secure.wayforpay.com/button/be474e83702b6');
+            }
           }, 200);
         }
       }

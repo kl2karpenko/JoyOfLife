@@ -29,8 +29,14 @@ html .roof109 {
     @media screen and (min-width: @md) {
       text-align: right;
 
-      .left-description > * {
-        text-align: right !important;
+      .left-description {
+        > * {
+          text-align: center !important;
+        }
+
+        .intro-text {
+          margin-top: 2rem;
+        }
       }
     }
 
@@ -53,6 +59,28 @@ html .roof109 {
 
     h4 {
       color: @red !important;
+
+       a {
+         transition: all .2s;
+         color: #fff !important;
+
+         span {
+           text-decoration: underline !important;
+         }
+
+         i {
+           margin-right: 5px;
+         }
+
+         &:hover {
+           color: @red !important;
+           text-decoration: none !important;
+
+           span {
+             text-decoration: none !important;
+           }
+         }
+       }
     }
 
     #mc_embed_signup_scroll {
@@ -87,7 +115,17 @@ html .roof109 {
   .focus {
     background: rgba(71, 71, 71, 0.75) !important;
 
+    div.title.md {
+      font-size: 2.5rem!important;
+    }
+
     &-box {
+      h3.red-border-bottom {
+        width: 100%;
+        word-break: break-word;
+        font-size: 1.5rem;
+      }
+
       .fas {
         font-size: 80px;
 
@@ -263,6 +301,10 @@ html .roof109 {
       color: #272727 !important;
       //color: #b5b0b0 !important;
       text-align: center !important;
+
+      * {
+        color: #272727 !important;
+      }
     }
 
     .list {
@@ -310,11 +352,19 @@ html .roof109 {
             margin-bottom: 20px;
           }
 
-          @media screen and (max-width: @md) {
+          @media screen and (min-width: @sm + 1) and (max-width: @md) {
             flex-basis: 50%;
             width: 50%;
             margin-left: 0;
             height: 250px;
+            margin-bottom: 5px;
+          }
+
+          @media screen and (max-width: @sm) {
+            flex-basis: 100%;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 5px;
           }
         }
       }
@@ -466,11 +516,11 @@ html .roof109 {
         font-family: 'Gabriela', sans-serif;
         position: relative;
 
-        padding-left: 50px;
+        padding-left: 60px;
 
         .counter {
           position: absolute;
-          left: -35px;
+          left: -20px;
           display: inline-block;
           text-align: center;
           margin: -6px 10px;
@@ -528,17 +578,6 @@ html .roof109 {
   z-index: 2;
 }
 
-.male.roof109 .list ul.male {
+.roof109 .list ul {
   display: flex !important;
-}
-.female.roof109 .list ul.female {
-  display: flex !important;
-}
-
-.female.roof109 .list ul.male {
-  display: none !important;
-}
-
-.male.roof109 .list ul.female {
-  display: none !important;
 }

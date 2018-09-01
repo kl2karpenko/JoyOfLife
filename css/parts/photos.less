@@ -12,12 +12,52 @@
     border: 1px solid rgba(256, 256, 256, 0.6);
   }
 
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
   img {
-    width: 100%;
+    width: auto;
+    display: inline-block;
     height: 250px;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
 
     @media screen and (max-width: 600px) {
       height: 180px;
+    }
+  }
+}
+
+html div.lightBox-popup {
+  background: rgba(0,0,0,0.8);
+}
+
+@media screen and (max-width: 600px) {
+  html div.lightBox-popup {
+    width: 100% !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+
+    height: 100% !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .lightBox-view {
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 100% !important;
+        height: auto !important;
+      }
     }
   }
 }
