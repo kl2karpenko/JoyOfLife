@@ -1,0 +1,13 @@
+<ul>
+  {% for item in body.menuItems %}
+
+  {% if item.active %}
+  <li><a class="active {{ item.class }}" href="{{path}}{{ item.href }}">{{ item.text }}</a></li>
+  {% endif %}
+
+  {% else %}
+
+  <li><a class="{{ item.class }}" href="{{path}}{{ item.href }}">{{ item.text }}</a></li>
+
+  {% endfor %}
+</ul>

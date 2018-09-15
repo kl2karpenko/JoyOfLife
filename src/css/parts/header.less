@@ -1,0 +1,59 @@
+header {
+  .header-content-wrap {
+    background-color: rgba(0,0,0,0.35);
+    margin-top: 120px;
+    padding: 170px 0 50px;
+    font-weight: 300;
+
+    @media screen and (max-width: @sm) {
+      padding-top: 90px !important;
+    }
+
+    .intro-text {
+      color: #fff;
+      white-space: normal;
+      @media screen and (max-width: @sm) {
+        font-size: 2.6rem;
+        line-height: 45px;
+      }
+    }
+  }
+
+  .buttons {
+    margin-top: 45px;
+    text-align: center;
+
+    .btn {
+      width: 100%;
+      padding: 22px 9%;
+      font-size: 1.5rem;
+
+      //text-transform: uppercase;
+      margin-right: 10px;
+      margin-bottom: -5px;
+
+      white-space: normal;
+
+      @media screen and (max-width: @sm) {
+        margin-left: 0;
+        padding: 15px 9%;
+      }
+    }
+  }
+
+  h4 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+
+.intro-text, .intro-text a {
+  float: none;
+  z-index: 0;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 65px;
+  text-align: center;
+  //text-transform: uppercase;
+}

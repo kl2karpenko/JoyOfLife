@@ -1,0 +1,8 @@
+<div class="photos">
+  {% for item in body.photos.list %}
+  <img class='js-lightBox lozad'
+       data-title='{{item.title}}'
+       data-group='group-1' width="150" height="100"
+       data-src="{{path}}{{item.src}}" alt="">
+  {% endfor %}
+</div>
