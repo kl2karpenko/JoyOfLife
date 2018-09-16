@@ -1,0 +1,7 @@
+requirejs('./parts/jquery.js')
+requirejs('./parts/bootstrap.min.js')
+requirejs('./parts/analitics.js')
+requirejs('./parts/facebookfeed.js')
+requirejs('./parts/mc-validate.js')
+requirejs('./parts/pixel-FB.js')
+requirejs('./parts/signup.js')

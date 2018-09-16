@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="events-wrapper">
+    {% for item in events.list %}
+    {% if item.active %}
+    <a class="events-block red" href="{{item.href}}">
+    {% else %}
+    <a class="events-block white" href="{{item.href}}">
+    {% endif %}
+
+      <div class="container">
+        <div class="events-time">{{item.date}}</div>
+        <div class="events-name">{{item.name}}</div>
+        <span class="btn red-btn btn-lg">{{item.button}}</span>
+      </div>
+      <div class="clearfix"></div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

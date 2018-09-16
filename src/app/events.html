@@ -1,13 +1,43 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+  <!-- HEAD PARTS -->
+  <head>
+    {% include "src/tmpl/head/metaHead.html" %}
+    {% include "src/tmpl/head/links.html" %}
+    {% include "src/tmpl/head/fbPixel.html" %}
+  </head>
+  <!-- HEAD PARTS -->
 
-</body>
+  <body class="body">
+
+    <!-- FACEBOOK MESSENGER -->
+    {% include "src/tmpl/body/fbMessenger.html" %}
+    <!-- FACEBOOK MESSENGER -->
+
+    <!-- MAIN HEADER WITH 2 items -->
+    {% include "src/tmpl/header/events.html" %}
+    <!-- MAIN HEADER WITH 2 items -->
+
+    <div id="contentMain" class="events-page">
+      <div class="layout-img"></div>
+
+      <h1 class="intro-text">Расписание мероприятий:</h1>
+
+      <section>
+        <!-- MAIN EVENTS LIST -->
+        {% include "src/tmpl/events/list.html" %}
+        <!-- MAIN EVENTS LIST -->
+      </section>
+
+      <!-- SIGN UP FORM -->
+      {% include "src/tmpl/body/signup.html" %}
+      <!-- SIGN UP FORM  -->
+
+      <footer>
+        {% include "src/tmpl/body/footer.html" %}
+      </footer>
+    </div>
+
+    {% include "src/tmpl/footer/mainScripts.html" %}
+  </body>
 </html>
