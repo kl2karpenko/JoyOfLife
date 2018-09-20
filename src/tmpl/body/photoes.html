@@ -1,8 +1,20 @@
-<div class="photos">
-  {% for item in body.photos.list %}
-  <img class='js-lightBox lozad'
-       data-title='{{item.title}}'
-       data-group='group-1' width="150" height="100"
-       data-src="{{pathToSrc}}{{item.src}}" alt="">
-  {% endfor %}
+<div id="lightgalleryImages" style="visibility: hidden; position: relative; margin: 0 auto;
+        top: 0px; left: 0px; width: 100%; height: 500px; overflow: hidden;">
+
+  <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
+  </div>
+
+  <div class="photos" data-u="slides">
+    {% for item in body.photos.list %}
+    <a href="{{pathToSrc}}{{item.src.replace('-min', '-full')}}" data-toggle="lightbox">
+      <img class='js-lightBox lozad'
+           data-title='{{item.title}}'
+           data-group='group-1' width="150" height="100"
+           data-u="image"
+           src="{{pathToSrc}}{{item.src}}"
+           alt="Title" />
+    </a>
+    {% endfor %}
+  </div>
 </div>

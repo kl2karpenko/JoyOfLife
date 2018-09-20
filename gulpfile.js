@@ -8,6 +8,8 @@ const
   cleanCSSPlugin      = new LessPluginCleanCSS({advanced: true}),
   pump                = require('pump'),
   fs                  = require('fs'),
+  gulpCopy            = require('gulp-copy'),
+  imagemin            = require('gulp-imagemin'),
   concat              = require('gulp-concat'),
   nunjucksRender      = require('gulp-nunjucks-render'),
   debug               = require('gulp-debug'),
@@ -83,6 +85,13 @@ const htmlPages = gulp.task('htmlPages', () =>
     .pipe(gulp.dest("./public/events"))
 );
 
+const copeSeparateJs =
+  gulp.task('copeSeparateJs', function (cb) {
+    return gulp
+      .src('src/js/separate/*.js')
+      .pipe(gulp.dest('public/js/separate'));
+  });
+
 const uglifyJS =
   gulp.task('uglifyJS', function (cb) {
     pump([
@@ -108,17 +117,26 @@ const uglifyJSForEvents =
     );
   });
 
+const imgMin =
+  gulp.task('imgMin', () =>
+    gulp.src('src/img/howitwas/*')
+      .pipe(imagemin())
+      .pipe(gulp.dest('public/img/howitwas'))
+  );
+
 gulp.task('html', () => ([
   htmlMain,
   htmlEvents,
   htmlPages
 ]));
 
-gulp.task('default', () => ([
-  lessTask,
-  htmlMain,
-  htmlEvents,
-  htmlPages,
-  uglifyJSForEvents,
-  uglifyJS
-]));
+gulp.task('default', () => {
+  gulp.watch('src/app/**/*.html', ['htmlMain']);
+  gulp.watch('src/tmpl/**/*.html', ['htmlMain', 'htmlPages', 'htmlEvents']);
+  // gulp.watch('src/app/events/**.html', ['htmlPages']);
+  // gulp.watch('src/app/events.html', ['htmlEvents']);
+  gulp.watch('src/css/app.less', ['less']);
+  gulp.watch('src/js/separate/*.js', ['uglifyJSForEvents']);
+  gulp.watch('src/js/events/*.js', ['uglifyJSForEvents']);
+  gulp.watch('src/js/parts/*.js', ['uglifyJS']);
+});

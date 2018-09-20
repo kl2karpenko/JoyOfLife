@@ -1,3 +1,4 @@
-jQuery(document).ready(function (e) {
-  e.DNLightBox({speed: 500});
+$(function() {
+  var options = { $AutoPlay: 1 };
+  var jssor1_slider = new $JssorSlider$("lightgalleryImages", options);
 });
